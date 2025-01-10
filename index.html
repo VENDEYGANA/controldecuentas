@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Cuentas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Cuentas</h1>
+        <div class="form-group">
+            <label for="cuenta">Datos de la Cuenta:</label>
+            <input type="text" id="cuenta" placeholder="Ingrese los datos de la cuenta">
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo del Cliente:</label>
+            <input type="email" id="correo" placeholder="Ingrese el correo del cliente">
+        </div>
+        <div class="form-group">
+            <label for="vendedor">Vendedor:</label>
+            <select id="vendedor">
+                <option value="">Seleccione un vendedor</option>
+                <option value="Thani">Thani</option>
+                <option value="Ricardo">Ricardo</option>
+                <option value="Milagros">Milagros</option>
+                <option value="Antoni">Antoni</option>
+                <option value="Aireana">Aireana</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button onclick="guardarDatos()">Guardar</button>
+        </div>
+        <div class="form-group">
+            <label for="buscar">Buscar:</label>
+            <input type="text" id="buscar" placeholder="Buscar cuenta..." oninput="buscarDatos()">
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datos de la Cuenta</th>
+                        <th>Correo del Cliente</th>
+                        <th>Fecha de Ingreso</th>
+                        <th>Fecha de Venta</th>
+                        <th>Fecha de Vencimiento</th>
+                        <th>Vendedor</th>
+                        <th>Copiar Datos</th>
+                    </tr>
+                </thead>
+                <tbody id="datos-body">
+                    <!-- Los datos guardados aparecerán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
